@@ -1,14 +1,16 @@
-// Define the Post interface
+export interface SanityImageSource {
+  _ref: string;
+  _type?: string;
+}
+
 export interface Post {
   _id: string;
   title: string;
-  mainImage: {
-    asset: {
-      _ref: string;
-    };
-  };
-  body: any; // You can refine this depending on your schema (e.g., rich text)
-  slug: {
-    current: string;
-  };
+  slug: string;
+  mainImage: string | SanityImageSource | { asset?: SanityImageSource };
+  body: Array<{
+    _type: string;
+    children: Array<{ text: string }>;
+    asset?: { _ref: string };
+  }>;
 }

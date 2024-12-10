@@ -1,9 +1,10 @@
 import { client } from '@/lib/sanity'; // Ensure you import your Sanity client
 import BlogPost from '@/components/BlogPost';
+import { Post } from '@/types'; // Import your Post type
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
   const query = `*[_type == "post" && slug.current == "${params.slug}"][0]`; // Sanity query to get the specific post by slug
-  const post = await client.fetch(query);
+  const post: Post = await client.fetch(query); // Type the post object
 
   return (
     <div>
