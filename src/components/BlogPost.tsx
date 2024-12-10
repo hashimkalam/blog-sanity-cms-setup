@@ -1,6 +1,7 @@
-import Image from 'next/image';
+
 import { urlFor } from '@/lib/sanity';
 import { Post, SanityImageSource } from '@/types';
+import Image from 'next/image';
 import { Key } from 'react';
 
 // Update the types to handle Sanity image sources correctly
