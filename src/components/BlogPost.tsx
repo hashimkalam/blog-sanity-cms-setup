@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { urlFor } from '@/lib/sanity';
-import { Post } from '@/types';
+// import { Post } from '@/types';
  
 // Define BlogPost component with correct types
-export default function BlogPost({ post }: { post: Post }) {
+export default function BlogPost({ post }: { post: any }) {
   return (
     <div>
       <h2>{post.title}</h2>
