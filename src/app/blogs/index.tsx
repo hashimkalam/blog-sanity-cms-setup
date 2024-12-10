@@ -1,6 +1,6 @@
-import { client } from '../lib/sanity';
-import BlogPost from '../components/BlogPost';
-import { Post } from '../types'; // Import Post type
+import { client } from '../../lib/sanity';
+import BlogPost from '../../components/BlogPost';
+import { Post } from '../../types'; // Import Post type
 
 export default function Home({ posts }: { posts: Post[] }) {
   return (

@@ -1,5 +1,5 @@
-import { client } from '../lib/sanity';
-import BlogPost from '../components/BlogPost';
+import { client } from '../../lib/sanity';
+import BlogPost from '../../components/BlogPost';
 
 export default function Post({ post }: any) {
   return (
